@@ -56,16 +56,18 @@ public class Job {
             return "OOPS! This job does not seem to exist.";
         }
 
-        String output = "\nID: " + id + "\n";
+        String output = "\n";
 
+        output += "ID: " + id + "\n";
         output += "Name: " + (name == null || name.isEmpty() ? "Data not available" : name) + "\n";
         output += "Employer: " + (employer == null || employer.getValue().isEmpty() ? "Data not available" : employer.getValue()) + "\n";
         output += "Location: " + (location == null || location.getValue().isEmpty() ? "Data not available" : location.getValue()) + "\n";
         output += "Position Type: " + (positionType == null || positionType.getValue().isEmpty() ? "Data not available" : positionType.getValue()) + "\n";
-        output += "Core Competency: " + (coreCompetency == null || coreCompetency.getValue().isEmpty() ? "Data not available" : coreCompetency.getValue()) + "\n";
+        output += "Core Competency: " + (coreCompetency == null || coreCompetency.getValue().isEmpty() ? "Data not available" : coreCompetency.getValue());
 
-        return output;
-    }
+        output += "\n";
+
+        return output;}
 
     // TODO: Add getters for each field EXCEPT nextId. Add setters for each field EXCEPT nextID
     //  and id.
